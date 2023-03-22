@@ -46,7 +46,12 @@ public class FoxController : MonoBehaviour
 
         if (Input.GetKeyDown("space"))
         {
-            
+            foxAnim.SetBool("space", true);
+        }
+
+        if (Input.GetKeyUp("space"))
+        {
+            foxAnim.SetBool("space", false);
         }
 
     }
