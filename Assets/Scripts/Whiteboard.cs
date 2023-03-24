@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Whiteboard : MonoBehaviour
 {
-    //3D Physics
-        // Dynamics
-            // Objects postions based on forces.
-            
-        //Collision Detection
-            // Is one object within another
+    // Throw the bowling in the direction of the  arrow
+            //- direction the arrow is pointing
+            // - add a force to the bowling ball in that direction.
 
-        // Collision Interaction(Response)
-         // What happens when objects collide.
+    // Throw A new ball
+        // - Instantiate a new ball
+        // - Wait till ball arrives at the end to start a new turn.
+
+    //Have multiple ball option
+
+    //Count the number of pins fallen
         
 }

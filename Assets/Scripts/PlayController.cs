@@ -25,6 +25,9 @@ public class PlayController : MonoBehaviour
 
     public bool wasBallThrown;
 
+    [SerializeField]
+    float force;
+
   
 
 
@@ -61,7 +64,7 @@ public class PlayController : MonoBehaviour
 
             GameObject ballClone = Instantiate(bowlingBallPrefabs[index], transform);
 
-            ballClone.GetComponent<Rigidbody>().AddForce(throwDirection.forward * -1000);
+            ballClone.GetComponent<Rigidbody>().AddForce(throwDirection.forward * -1000 * force);
 
             wasBallThrown = true;
              
