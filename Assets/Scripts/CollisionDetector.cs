@@ -16,9 +16,9 @@ public class CollisionDetector : MonoBehaviour
         if(other.tag == "Ball")
         {
             Destroy(other.gameObject);
-            playController.wasBallThrown = false;
+            //playController.wasBallThrown = false;
 
-            gameManager.CountFallenPins();
+            //gameManager.CountFallenPins();
         }
 
     }

@@ -64,7 +64,7 @@ public class PlayController : MonoBehaviour
 
             GameObject ballClone = Instantiate(bowlingBallPrefabs[index], transform);
 
-            ballClone.GetComponent<Rigidbody>().AddForce(throwDirection.forward * -1000 * force);
+            ballClone.GetComponent<Rigidbody>().AddForce(throwDirection.forward * -1 * force,ForceMode.Impulse);
 
             wasBallThrown = true;
              
