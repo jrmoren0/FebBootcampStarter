@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    int score = 0;
+   
 
     public Pin[] Pins;
 
@@ -19,10 +20,37 @@ public class GameManager : MonoBehaviour
     private Vector3 intitalCamPosition;
 
 
+
+
+    [SerializeField]
+    private TMP_Text frameTotalScore;
+
+    [SerializeField]
+    private TMP_Text frameNumber;
+
+    [SerializeField]
+    private TMP_Text frame1stThrowScore;
+
+    [SerializeField]
+    private TMP_Text frame2ndThrowScore;
+
+
+  
+
+    private int totalScore = 0;
+
+    private int currentFrame;
+
+    private int currentScore;
+
+
+
+
     private void Start()
     {
         resetTime = 4.0f;
         intitalCamPosition = Camera.main.transform.position;
+        currentFrame = 1;
 
     }
 
@@ -42,15 +70,19 @@ public class GameManager : MonoBehaviour
 
     private void CountFallenPins()
     {
+        currentScore = 0;
+
         foreach(var pin in Pins)
         {
             if (pin.pinfell)
             {
-                score += 1;
+                currentScore += 1;
+                totalScore += 1;
             }
         }
 
-        Debug.Log(score);
+        UpdateUI();
+        NextFrame();
 
     }
 
@@ -68,6 +100,7 @@ public class GameManager : MonoBehaviour
             pin.transform.rotation = pin.initialPinRotation;
             pin.transform.position = pin.initialPinPosition;
             pin.GetComponent<Rigidbody>().isKinematic = true;
+            pin.pinfell = false;
         }
         foreach (var pin in Pins)
         {
@@ -78,7 +111,36 @@ public class GameManager : MonoBehaviour
 
 
 
+    private void NextFrame()
+    {
+        if(currentFrame < 2)
+        {
+            currentFrame += 1;
+        }
+        else
+        {
+            currentFrame = 1;
+        }
+    }
 
+    private void UpdateUI()
+    {
+        frameTotalScore.text = totalScore.ToString();
+        frameNumber.text = currentFrame.ToString();
+
+        if(currentFrame == 1)
+        {
+            frame1stThrowScore.text = currentScore.ToString();
+        }
+        else
+        {
+            frame2ndThrowScore.text = currentScore.ToString();
+        }
+
+
+
+
+    }
 
 
 

@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 7040f3effbcf544a88d1d3d332cbc1be
+  - enabled: 1
+    path: Assets/BowlingAssets/BRockBowl.unity
+    guid: 8863c66f59224494aa6898bd7de6a269
+  - enabled: 1
+    path: Assets/Scenes/BowlingAlley.unity
+    guid: 0753a5188a3a6477e95b59d863107b6d
   m_configObjects: {}
