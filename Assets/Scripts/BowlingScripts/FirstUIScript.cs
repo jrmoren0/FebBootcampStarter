@@ -22,4 +22,9 @@ public class FirstUIScript : MonoBehaviour
         SceneManager.LoadScene("BowlingAlley");
     }
 
+    public void ReturnToMain()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 }

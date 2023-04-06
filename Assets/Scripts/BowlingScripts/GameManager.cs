@@ -19,9 +19,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Vector3 intitalCamPosition;
 
-
-
-
     [SerializeField]
     private TMP_Text frameTotalScore;
 
@@ -34,16 +31,17 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private TMP_Text frame2ndThrowScore;
 
-
-  
-
     private int totalScore = 0;
 
     private int currentFrame;
 
     private int currentScore;
 
+    [SerializeField]
+    private AudioSource strike;
 
+    [SerializeField]
+    private AudioSource rolling;
 
 
     private void Start()
@@ -58,6 +56,7 @@ public class GameManager : MonoBehaviour
     {
         if (playController.wasBallThrown)
         {
+            rolling.Play();
             playController.wasBallThrown = false;
             Invoke("CountFallenPins", resetTime);
             Invoke("ResetCamera", resetTime);
@@ -81,8 +80,10 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        UpdateUI();
         NextFrame();
+        UpdateUI();
+       
+
 
     }
 

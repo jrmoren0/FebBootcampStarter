@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GameManager">
+    <Position X="6" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>gARQIAAAgSAAAAAABAEIASIIIAACAAAAAgCAAAAAACA=</HashCode>
+      <FileName>Assets\Scripts\BowlingScripts\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pin">
+    <Position X="1.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAgAABACAQAAAAAAAAAAAAAAAAABgAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BowlingScripts\Pin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayController">
+    <Position X="3.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwgAAAAACAAAAAAAAAAAAAEAAAAAQAIAABgEQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BowlingScripts\PlayController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThirdPersonCamera">
+    <Position X="5.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BowlingScripts\ThirdPersonCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
