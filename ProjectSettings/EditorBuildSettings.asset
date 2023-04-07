@@ -17,4 +17,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BowlingAlley.unity
     guid: 0753a5188a3a6477e95b59d863107b6d
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 27feca10d6dc2439dbda144b82273851, type: 2}

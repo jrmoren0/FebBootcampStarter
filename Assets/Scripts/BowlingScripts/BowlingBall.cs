@@ -12,6 +12,8 @@ public class BowlingBall : MonoBehaviour
      GameObject strikeObject = GameObject.FindGameObjectWithTag("Strike");
 
       strike = strikeObject.GetComponent<AudioSource>();
+
+        Destroy(gameObject,4);
     }
 
     private void OnCollisionEnter(Collision collision)
